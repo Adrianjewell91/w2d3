@@ -1,0 +1,21 @@
+header img {
+  width: 100px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: antiquewhite;
+  line-height: 1.5
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+ul.ingredients-list {
+  list-style: square;
+}
+
+ol.directions-list {
+  list-style: none;
+}
