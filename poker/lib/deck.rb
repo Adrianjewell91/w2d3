@@ -8,7 +8,7 @@ class Deck
     cards = []
     4.times do |i|  # .times implicitly returns # of times
       VALUE.each do |value|
-        cards << "#{value}-#{SUITE[i]}"
+        cards << Card.new("#{value}-#{SUITE[i]}")
       end
     end
     Deck.new(cards) # needed

@@ -18,10 +18,15 @@ describe Deck do
       expect(deck.unused_cards.length).to eq(52)
     end
 
-    it "should have thirteen hearts" do
-      hearts = deck.unused_cards.count { |el| el.include?('H') }
+    it "should have thirteen hearts" do #.to_s returns card's string value.
+      hearts = deck.unused_cards.count { |el| el.to_s.include?('H') }
       expect(hearts).to eq(13)
     end # could test for other 3 suites
+
+    it "should fill the deck with card objects" do
+      card = deck.unused_cards.first
+      expect(card.class).to eq(Card)
+    end
   end
 
   describe "#shuffle_deck" do
